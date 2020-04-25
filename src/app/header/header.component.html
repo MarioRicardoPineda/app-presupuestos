@@ -1,0 +1,27 @@
+<header class="header" >
+  <h1>Presupuesto disponible</h1>
+
+  <h2> 
+    {{ presupuestoTotal | currency:'USD' }} 
+  </h2>
+
+  <div class="totales">
+
+    <div class="box ingresos">
+      <p>Ingresos</p>
+      <div >
+        {{  ingresosTotales | currency:'USD' }}
+        <span></span>
+      </div>
+    </div>
+
+    <div class="box gastos">
+      <p>Gastos</p>
+      <div>
+       - {{ gastosTotales | currency:'USD' }}
+        <span> {{ porcentaje | percent: '1.1-1' }} </span>
+      </div>
+      
+    </div>
+  </div>
+</header>

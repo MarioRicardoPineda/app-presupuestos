@@ -1,0 +1,11 @@
+<h3>Ingresos</h3>
+<ul class="list-ingresos">
+  <li class="list__item" *ngFor="let ingresos of listaIngresos; let id = index">
+
+    <p class="name">{{ ingresos.description }}</p>
+
+    <p class="costo"> {{ ingresos.costo | currency:'USD' }} </p>
+    <i class="fa fa-times-circle" (click)="onDelete(id)"> </i>
+
+  </li>
+</ul>

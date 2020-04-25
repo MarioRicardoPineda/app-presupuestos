@@ -1,0 +1,20 @@
+<h3>Gastos</h3>
+<ul class="list-gastos" *ngFor="let g of gastos; let index = index">
+
+  <li class="list__item">
+
+    <p class="name"> {{ g.description }} </p>
+
+    <p class="costo"> 
+     - {{ g.costo | currency: 'USD' }}
+      <span class="porcentaje">
+        {{ g.percent | percent:'1.1-1' }}
+      </span>
+    </p>
+    <i class="fa fa-times-circle" 
+      (click)="removeGastos(index)"
+    ></i>
+
+  </li>
+
+</ul>

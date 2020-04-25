@@ -1,0 +1,61 @@
+@import '../../assets/sass/variables';
+
+h3{
+  margin-bottom: 1rem;
+  color: $gastos;
+  text-transform: uppercase;
+}
+
+.list-gastos{
+  width: 600px;
+  list-style: none;
+}
+
+.list__item{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid darken($white, 10);
+  margin-bottom: 2px;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all .3s;
+  font-size: 18px;
+  color: #777;
+
+  &:hover > .costo{
+    transform: translateX(-3rem);
+  }
+
+  i{
+    position: absolute;
+    right: 5%;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: $gastos;
+  }
+
+}
+
+.costo{
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  transition: all .3s;
+  padding: 0.3rem;
+  color: $gastos;
+  z-index: 1;
+
+  .porcentaje{
+    margin-left: 0.8rem;
+    font-size: 12px;
+    color: $gastos;
+    border-radius: 3px;
+    padding: 0.2rem;
+    background-color: rgba($gastos, .4);
+  }
+
+}
+

@@ -1,0 +1,87 @@
+@import '../../assets/sass/variables';
+
+.header{
+  height: 40vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: $white;
+  padding: 1rem;
+
+  background-color: #c0392b; 
+  background-image: -webkit-linear-gradient(to left, #8e44ad, #c0392b);
+  background-image: linear-gradient(to left, #8e44ad, #c0392b); 
+
+  h1{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  h2{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+
+}
+
+.totales{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-size: 18px;
+  border-radius: .3rem;
+  box-shadow: 0 8px 10px -5px rgba(#444, .5);
+  transition: all .2s;
+
+}
+
+.ingresos, .gastos{
+
+  div{
+    display: flex;
+    align-items: center;
+  }
+
+  span{
+    display: inline-block; 
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    margin-left: 0.6rem;
+    font-size: 12px;
+    border-radius: 5px;
+    line-height: 20px;
+  }
+
+}
+
+.ingresos{
+  background-color: $ingresos;
+  &:hover{
+    transform: scaleX(1.04) ;
+  }
+}
+.gastos{
+  background-color: $gastos;
+  &:hover {
+    transform: scale(1.04);
+  }
+
+  span{
+    background-color: lighten($gastos, 15);
+  }
+
+}

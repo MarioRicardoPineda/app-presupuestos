@@ -1,0 +1,41 @@
+<div class="content-form">
+  <form class="form" (ngSubmit)="f.form.valid && onSave()" #f="ngForm"> 
+    <div class="group">
+      <select 
+      [ngClass]="isSelect == 'ingreso' ? 'classIngresos': 'classGastos'"
+      [(ngModel)]="isSelect" name="isIngreso">
+        <option value="ingreso" > + </option>
+        <option value="isGasto"> - </option>
+      </select>
+    </div>
+  
+    <div class="group">
+      <input 
+      [(ngModel)]="description" name="description" required
+      type="text" placeholder="Ej: salida al cine" 
+      [ngClass]="isSelect == 'ingreso' ? 'classIngresos' : 'classGastos'">
+    </div>
+  
+    <div class="group">
+      <input 
+      [(ngModel)]="costo" name="costo" required
+      type="number" placeholder="300.00" 
+      [ngClass]="isSelect == 'ingreso' ? 'classIngresos' : 'classGastos'"
+      >
+    </div>
+
+    <button class="icons" type="submit"
+            *ngIf="isSelect == 'ingreso'; else isGastos">
+      <i class="fa fa-check-circle"></i>
+    </button>
+
+    <ng-template #isGastos>
+      <button 
+          class="icons" type="submit"
+          *ngIf="isSelect == 'isGasto'; else isGastos">
+        <i class="fa fa-times-circle"></i>
+      </button>
+    </ng-template>
+    
+  </form>
+</div>

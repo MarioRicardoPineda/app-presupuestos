@@ -1,0 +1,16 @@
+
+<app-header></app-header>
+
+<app-formulario></app-formulario>
+
+<div class="grid-registros">
+  <h3>Tus ingresos y gastos</h3>
+  <app-ingresos 
+    [listaIngresos]="listaIngresos"
+  ></app-ingresos>
+
+  <app-gastos
+    [gastos]="listaGastos"
+  ></app-gastos>
+</div>
+

@@ -1,0 +1,69 @@
+@import '../../assets/sass/variables';
+
+.content-form{
+  padding: 1rem;
+  background-color: darken($white, 6);
+  margin-bottom: 2rem;
+}
+
+.form{
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.group{
+
+  select, input, option{
+    padding: 1rem;
+    border: 1px solid darken($white, 5);
+    font-size: 18px;
+    outline: none;
+    border-radius: .4rem;
+  }
+
+  input[type=text]{
+    width: 25rem;
+  }
+
+  input[type=number]{
+    width: 8rem;
+  }
+
+}
+
+.classIngresos{
+  border: 1px solid $ingresos !important;
+}
+
+.classGastos{
+  border: 1px solid $gastos !important;
+}
+
+.form i{
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.fa-check-circle{
+  color: $ingresos;
+}
+
+.fa-times-circle{
+  color: $gastos;
+}
+
+.icons{
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 0 1rem;
+  outline: none;
+  border-radius: 15px;
+
+  &:active{
+    transform: scale(0.9)
+  }
+}
